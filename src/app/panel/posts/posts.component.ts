@@ -16,7 +16,7 @@ export class PostsComponent implements OnInit {
     takeUntilDestroyed(),
     tap(() => (this.isLoadingResults = false))
   );
-  displayedColumns = ['title','created_at']
+  displayedColumns = ['title','created_at','actions']
 
   ngOnInit(): void {}
 }
