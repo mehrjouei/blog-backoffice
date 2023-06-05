@@ -1,1 +1,28 @@
-<p>panel works!</p>
+<header class="border-b p-3 bg-gray-100">My Blog!</header>
+<div class="flex flex-1 h-full">
+  <nav class="flex border-r bg-gray-50">
+    <ul class="w-48">
+      <li>
+        <a
+          class="p-3 border-b block"
+          routerLink="/posts"
+          routerLinkActive="bg-gray-200"
+        >
+          Posts
+        </a>
+      </li>
+      <li>
+        <a
+          class="p-3 border-b block"
+          routerLink="/profile"
+          routerLinkActive="bg-gray-200"
+        >
+          Profile
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main class="flex-1 p-3">
+    <router-outlet></router-outlet>
+  </main>
+</div>

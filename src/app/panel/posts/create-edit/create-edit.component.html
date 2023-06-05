@@ -1,0 +1,24 @@
+<form
+  (ngSubmit)="submit()"
+  [formGroup]="form"
+  class="flex flex-col space-y-2 text-center"
+>
+  <mat-form-field class="example-full-width">
+    <mat-label>Title</mat-label>
+    <input matInput type="text" formControlName="title" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Content</mat-label>
+    <input matInput type="text" formControlName="content" />
+  </mat-form-field>
+
+
+  <button
+    [disabled]="form.invalid"
+    mat-raised-button
+    color="primary"
+    type="submit"
+  >
+    submit
+  </button>
+</form>
