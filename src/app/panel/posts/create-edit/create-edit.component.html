@@ -7,11 +7,20 @@
     <mat-label>Title</mat-label>
     <input matInput type="text" formControlName="title" />
   </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <mat-label>Content</mat-label>
-    <input matInput type="text" formControlName="content" />
-  </mat-form-field>
 
+  <editor
+    formControlName="content"
+    [init]="{
+      base_url: '/tinymce',
+      suffix: '.min',
+      height: 500,
+      menubar: true,
+      plugins: 'advlist anchor autosave image link lists media searchreplace table visualblocks wordcount',
+  
+      toolbar: 'undo redo | styles | bold italic underline strikethrough | align | table link image media | bullist numlist outdent indent',
+  
+    }"
+  ></editor>
   <button
     [disabled]="form.invalid"
     mat-raised-button
