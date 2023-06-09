@@ -32,7 +32,8 @@
           Actions
         </th>
         <td mat-cell *matCellDef="let row">
-          <a [routerLink]="['edit', row._id]">Edit</a>
+          <a class="text-blue-600 cursor-pointer" [routerLink]="['edit', row._id]">Edit</a>
+          <a class="ml-2 text-red-600 cursor-pointer" (click)="openRemoveDialog(row)">Remove</a>
         </td>
       </ng-container>
 

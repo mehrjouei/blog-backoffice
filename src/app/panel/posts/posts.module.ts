@@ -10,9 +10,11 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { CreateEditComponent } from './create-edit/create-edit.component';
 import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
+import { RemoveDialogComponent } from './remove-dialog/remove-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [PostsComponent, CreateEditComponent],
+  declarations: [PostsComponent, CreateEditComponent, RemoveDialogComponent],
   imports: [
     CommonModule,
     PostsRoutingModule,
@@ -23,6 +25,7 @@ import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
     MatProgressSpinnerModule,
     MatTableModule,
     EditorModule,
+    MatDialogModule
   ],
   providers: [
     { provide: TINYMCE_SCRIPT_SRC, useValue: 'tinymce/tinymce.min.js' },

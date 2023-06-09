@@ -13,7 +13,7 @@ export class PostsService {
     return this.http.get<Post[]>(`${window.config.apiUrl}/posts`);
   }
 
-  getPostById(id:string) {
+  getPostById(id: string) {
     return this.http.get<Post>(`${window.config.apiUrl}/post/${id}`);
   }
 
@@ -31,5 +31,9 @@ export class PostsService {
       content,
       image,
     });
+  }
+
+  removePost(id: string) {
+    return this.http.delete<Post>(`${window.config.apiUrl}/post/${id}`);
   }
 }
